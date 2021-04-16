@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>My Daily Journal</title>
+</head>
+<body>
+    <Header>
+        <img src=".//assets/images/my-daily-journal.svg" class="h1" height=100px alt="My Daily Journal">
+
+        <img src=".//assets/images/today-01.svg" class="h2" height=70px alt="Today's Date">
+
+    </Header>
+
+    <article>
+        <div class="am">
+            <form id="am-input">
+                <div>
+                    <img src=".//assets/images/AM-02.svg" height=50px alt="AM">
+                </div>
+                <textarea hour ="am" class="description future" id="eventDetails" rows="3">
+                </textarea>
+                <button type="button" class="saveBtn" hour-block="hour-09">
+                    <img src=".//assets/images/savebtn-01.svg" height=30px class=savebtn-img alt="Save Button">
+                </button>
+            </form>
+
+            <!-- <p>
+                Sample
+            </p>
+            <input type="text" placeholder="" name="AM" id="am-input">
+            <button type="submit" class="am-submit">
+                save
+            </button>
+            <button type="clear" class="am-clear">
+                clear
+            </button> -->
+        </div>
+
+    </article>
+
+
+    <link rel="javascript" href="./assets/calender.js">
+
+</body>
+</html>
