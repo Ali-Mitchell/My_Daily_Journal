@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <title>My Daily Journal</title>
 </head>
 <body>
@@ -21,9 +23,10 @@
                 <div>
                     <img src=".//assets/images/AM-02.svg" height=50px alt="AM">
                 </div>
-                <textarea hour ="am" class="description future" id="eventDetails" rows="3">
-                </textarea>
-                <button type="button" class="saveBtn" hour-block="hour-09">
+
+                <input hour ="am" class="input-box" id="input">
+                </input>
+                <button type="button" class="saveBtn" id="am-btn">
                     <img src=".//assets/images/savebtn-01.svg" height=30px class=savebtn-img alt="Save Button">
                 </button>
             </form>
@@ -42,8 +45,7 @@
 
     </article>
 
-
-    <link rel="javascript" href="./assets/calender.js">
-
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./assets/calender.js"></script>
 </body>
 </html>
