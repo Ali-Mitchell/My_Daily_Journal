@@ -3,10 +3,10 @@ var addToForm = document.getElementById('am-input');
 var saveInput = document.getElementById('input');
 var saveBtn = document.getElementById('am-btn');
 
-savebtn.addEventListener('click', function(event) {
+saveBtn.addEventListener('click', function(event) {
     event.preventDefault();
-    addToForm.textContent = saveInput.value;
-    localStorage.setItem('saveInput.value');
+    // saveInput.textContent = saveInput.value;
+    localStorage.setItem('userInput', 'saveInput.value');
 });
 
 
