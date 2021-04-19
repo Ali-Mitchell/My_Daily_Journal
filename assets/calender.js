@@ -40,9 +40,9 @@ function timeCoding(){
     
     for (i = 9; i < 18; i++){
        
-        if (moment().format("H") > i){
+        if (moment().format("H:MM") > i){
             $(`#${i}`).addClass("past");
-        } else if (moment().format("H") < i){
+        } else if (moment().format("H:MM") < i){
             $(`#${i}`).addClass("future");
         } else{
             $(`#${i}`).addClass("present");

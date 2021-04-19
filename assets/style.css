@@ -53,11 +53,11 @@ header .h1 {
 }
 
 .past {
-    background-color:#F8F8F8;
+    background: url(https://t3.ftcdn.net/jpg/03/00/79/08/360_F_300790899_027OXxAM50Jb1zZMQJDaBr4tdMD354Rv.jpg);
 }
 
 .present {
-
+    background-color: linen;
 }
 
 .future {
