@@ -1,5 +1,4 @@
 
-var addToForm = document.getElementById('am-input');
 var saveInputEl = document.getElementById('input');
 var saveBtnEl = document.getElementById('amSaveBtn');
 
@@ -35,23 +34,47 @@ var returnText = function() {
 };
 returnText()
 
-function timeCoding(){
+function timeCodingAM(){
     //moment function to create time association for each hour
-    
-    for (i = 9; i < 18; i++){
        
-        if (moment().format("H:MM") > i){
-            $(`#${i}`).addClass("past");
-        } else if (moment().format("H:MM") < i){
-            $(`#${i}`).addClass("future");
-        } else{
-            $(`#${i}`).addClass("present");
-        };
+        if (moment().format("H") > 1 && moment().format("H") < 9) {
+            $(`.am`).addClass("present");
+
+        } else if (moment().format("H") >= 9){
+            $(`#input`).addClass("past");
+        } 
+    };
+
+timeCodingAM();  
+
+function timeCodingWork(){
+    //moment function to create time association for each hour
+       
+        if (moment().format("H") > 9 && moment().format("H") < 17) {
+            $(`.work`).addClass("present");
+
+        } else if (moment().format("H") >= 17){
+            $(`#work`).addClass("past");
+        } else if (moment().format("H") < 9){
+            $(`#work`).addClass("future");
+        }
+    };
+
+timeCodingWork();  
+
+function timeCodingPM(){
+    //moment function to create time association for each hour
+       
+        if (moment().format("H") > 17 && moment().format("H") < 22) {
+            $(`.pm`).addClass("present");
+
+        } else if (moment().format("H") >= 22){
+            $(`#pm`).addClass("past");
+        } 
          
-        $(`#${i}`)
-            .val(localStorage.getItem(i));
-    }      
-};
+    };
+
+timeCodingPM();
 
 //change span to input on click to allow text 
 //on blur change back to span
