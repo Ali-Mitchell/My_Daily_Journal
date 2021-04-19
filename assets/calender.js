@@ -6,7 +6,7 @@ var saveBtn = document.getElementById('am-btn');
 saveBtn.addEventListener('click', function(event) {
     event.preventDefault();
     // saveInput.textContent = saveInput.value;
-    localStorage.setItem('userInput', 'saveInput.value');
+    localStorage.setItem('userInput', saveInput.value);
 });
 
 
