@@ -4,6 +4,7 @@ var saveInputEl = document.getElementById('input');
 var saveBtnEl = document.getElementById('amSaveBtn');
 
 
+
 // show current date
 var currentDate = document.querySelector("#todays-date");
 currentDate.textContent = moment().format("dddd, Do MMMM");
@@ -17,9 +18,40 @@ saveBtnEl.addEventListener('click', function(event) {
     } else {
         localStorage.setItem('userInput', tasks);
     }
+   
+
+    // var showTasks = localStorage.getItem("userInput");
+    console.log(typeof tasks); 
+
+    
 });
 
 
+// function to allow saved events to persist
+var returnText = function() {
+    var returnTask = localStorage.getItem('userInput');
+    console.log(typeof returnTask);
+    saveInputEl.textContent = returnTask;
+};
+returnText()
+
+function timeCoding(){
+    //moment function to create time association for each hour
+    
+    for (i = 9; i < 18; i++){
+       
+        if (moment().format("H") > i){
+            $(`#${i}`).addClass("past");
+        } else if (moment().format("H") < i){
+            $(`#${i}`).addClass("future");
+        } else{
+            $(`#${i}`).addClass("present");
+        };
+         
+        $(`#${i}`)
+            .val(localStorage.getItem(i));
+    }      
+};
 
 //change span to input on click to allow text 
 //on blur change back to span
