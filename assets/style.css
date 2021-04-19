@@ -2,12 +2,19 @@ body {
    font-family: 'Courier New', Courier, monospace;
    font-weight: bold;
    font-size: 20px;
-   letter-spacing: 3px;
+   letter-spacing: 1px;
    text-align: center;
 }
 
-p {
+header p {
     font-family: 'Courier New', Courier, monospace;
+}
+
+article p {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin-top: 20px;
+    padding-right: 30px;
 }
 
 
@@ -23,7 +30,7 @@ header .h1 {
 }
 
 /*  body  */
-.input-box {
+.box {
    font-size: 18px;
    font-family: 'Courier New', Courier, monospace;
    border-radius: 12px;
@@ -61,5 +68,5 @@ header .h1 {
 }
 
 .future {
-
+    background-color:#F8F8F8;
 }

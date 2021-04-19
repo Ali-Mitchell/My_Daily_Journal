@@ -1,47 +1,82 @@
-
-var saveInputEl = document.getElementById('input');
-var saveBtnEl = document.getElementById('amSaveBtn');
-
-
-
 // show current date
 var currentDate = document.querySelector("#todays-date");
 currentDate.textContent = moment().format("dddd, Do MMMM");
 
-saveBtnEl.addEventListener('click', function(event) {
-    // event.preventDefault();
-    var tasks = saveInputEl.value
-    if(!tasks) {
-        alert("Please enter text to save to your journal");
-        return false;
-    } else {
-        localStorage.setItem('userInput', tasks);
-    }
-   
+// save Am Time Block
+            var saveInputEl = document.getElementById('input-am');
+            var saveBtnEl = document.getElementById('saveBtn');
 
-    // var showTasks = localStorage.getItem("userInput");
-    console.log(typeof tasks); 
-
-    
-});
+            saveBtnEl.addEventListener('click', function(event) {
+                var tasksAm = saveInputEl.value
+                if(!tasksAm) {
+                    alert("Please enter text to save to your journal");
+                    return false;
+                } else {
+                    localStorage.setItem('AM', tasksAM);
+                }
+            });
 
 
-// function to allow saved events to persist
-var returnText = function() {
-    var returnTask = localStorage.getItem('userInput');
-    console.log(typeof returnTask);
-    saveInputEl.textContent = returnTask;
-};
+            // function to allow saved events to persist
+            var returnText = function() {
+                var returnTask = localStorage.getItem('userInput');
+                console.log(typeof returnTask);
+                saveInputEl.textContent = returnTask;
+            };
 returnText()
 
-function timeCodingAM(){
-    //moment function to create time association for each hour
-       
+// work Function
+            var saveInputElWork = document.getElementById('input-work');
+            var saveBtnElWork = document.getElementById('saveBtn2');
+
+            saveBtnElWork.addEventListener('click', function(event) {
+                var tasksWork = saveInputElWork.value
+                if(!tasksWork) {
+                    alert("Please enter text to save to your journal");
+                    return false;
+                } else {
+                    localStorage.setItem('work', tasksWork);
+                }
+            });
+
+            // function to allow saved events to persist
+            var returnTextWork = function() {
+                
+                var returnTaskWork = localStorage.getItem('work');
+                console.log(typeof returnTask);
+                saveInputElWork.textContent = returnTaskWork;
+            };
+            returnTextWork()
+
+// Pm Function
+            var saveInputElPM = document.getElementById('input-PM');
+            var saveBtnElPM = document.getElementById('saveBtn3');
+
+            saveBtnElPM.addEventListener('click', function(event) {
+                var tasksPM = saveInputElPM.value
+                if(!tasksPM) {
+                    alert("Please enter text to save to your journal");
+                    return false;
+                } else {
+                    localStorage.setItem('pm', tasksPM);
+                }
+            });
+
+            // function to allow saved events to persist
+            var returnTextPM = function() {
+                var returnTaskPM = localStorage.getItem('pm');
+                saveInputElPM.textContent = returnTaskPM;
+            };
+            returnTextPM()
+
+
+//moment function to create time association for each hour
+    function timeCodingAM(){
         if (moment().format("H") > 1 && moment().format("H") < 9) {
             $(`.am`).addClass("present");
 
         } else if (moment().format("H") >= 9){
-            $(`#input`).addClass("past");
+            $(`.am`).addClass("past");
         } 
     };
 
@@ -54,9 +89,9 @@ function timeCodingWork(){
             $(`.work`).addClass("present");
 
         } else if (moment().format("H") >= 17){
-            $(`#work`).addClass("past");
+            $(`.work`).addClass("past");
         } else if (moment().format("H") < 9){
-            $(`#work`).addClass("future");
+            $(`.work`).addClass("future");
         }
     };
 
@@ -65,11 +100,11 @@ timeCodingWork();
 function timeCodingPM(){
     //moment function to create time association for each hour
        
-        if (moment().format("H") > 17 && moment().format("H") < 22) {
+        if (moment().format("H") > 17 && moment().format("H") < 24) {
             $(`.pm`).addClass("present");
 
-        } else if (moment().format("H") >= 22){
-            $(`#pm`).addClass("past");
+        } else if (moment().format("H") >= 24){
+            $(`.pm`).addClass("past");
         } 
          
     };
