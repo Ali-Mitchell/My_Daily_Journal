@@ -3,7 +3,7 @@
 # My Daily Journal
 
 ## Purpose
-A stylish daily calender application that allows a user to save task for typical working hours. The app displays time blocks as they are in the past, present, and future with different style types. A user can save their information here and have it persist inside of local storage.
+A stylish daily calender application that allows a user to save tasks for typical working hours. The app displays time blocks as they are in the past, present, and future with different style types. A user can save their information here and have it persist inside of local storage.
  
 
 ## Built With
