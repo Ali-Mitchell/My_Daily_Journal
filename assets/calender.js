@@ -1,46 +1,48 @@
 
 var addToForm = document.getElementById('am-input');
-var saveInput = document.getElementById('input');
-var saveBtn = document.getElementById('am-btn');
+var saveInputEl = document.getElementById('input');
+var saveBtnEl = document.getElementById('amSaveBtn');
 
-saveBtn.addEventListener('click', function(event) {
-    event.preventDefault();
-    // saveInput.textContent = saveInput.value;
-    localStorage.setItem('userInput', saveInput.value);
+
+// show current date
+var currentDate = document.querySelector("#todays-date");
+currentDate.textContent = moment().format("dddd, Do MMMM");
+
+saveBtnEl.addEventListener('click', function(event) {
+    // event.preventDefault();
+    var tasks = saveInputEl.value
+    if(!tasks) {
+        alert("Please enter text to save to your journal");
+        return false;
+    } else {
+        localStorage.setItem('userInput', tasks);
+    }
 });
 
 
 
-// var saveInput = function(event) {
-//     //Why do we have to do this?
-//     event.preventDefault();
-//     // only run if the submit button is being clicked
-//     var targetEl = event.target;
-//     if(targetEl.matches("#am-submit")) {
-//         // get the initial entry form element
-//         var amInputEl = document.querySelector("#am-input");
-//         var amUserInput = amInputEl.value
-//         // ensure that text has been entered 
-//         if(!amUserInputEl) {
-//             alert("Please enter text to save to your journal");
-//             return false;
-//         // save user input and store to localStorage
-//         } else {
-//             var dailyObj = {
-//                 initials: userInitials,
-//                 score: totalScore
-//             };
-//             // send obj to highScores array
-//             dailyTasks.push(dailyObj);
+//change span to input on click to allow text 
+//on blur change back to span
 
-//             console.log(dailyObj);
-//             console.log(highScores);
+// $(".saveBtn").on("click", function(){
+//     var task = $(this)
+//         .siblings(".description")
+//         .val();
 
-//             // save highScores array to local storage/ and convert the score into a string use json for javascript object notation*
-//             localStorage.setItem("tasks", JSON.stringify(dailyTasks));
-//         }
-//     }
-// };
+//     console.log(task);
+//     //create another for parent element to grab id. pass function to save to local storage on click
+//     var save = $(this)
+//         .siblings(".description")
+//         .attr("id")
+//     console.log(save);
+
+//     localStorage.setItem(save, task);
+    
+// });
+
+
+
+
 
 
 
