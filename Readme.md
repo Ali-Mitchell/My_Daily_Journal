@@ -17,6 +17,8 @@ https://ali-mitchell.github.io/My_Daily_Journal/
 
 
 ## Screenshot of Deployed Site
+![image](https://user-images.githubusercontent.com/79877350/115183364-dbeabf80-a098-11eb-9da0-f7554d327caf.png)
+
 
 
 ## Things I'd like to work on 
