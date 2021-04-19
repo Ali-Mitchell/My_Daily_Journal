@@ -17,7 +17,7 @@ https://ali-mitchell.github.io/My_Daily_Journal/
 
 
 ## Screenshot of Deployed Site
-![image](https://user-images.githubusercontent.com/79877350/115183364-dbeabf80-a098-11eb-9da0-f7554d327caf.png)
+![image](https://user-images.githubusercontent.com/79877350/115184410-0473b900-a09b-11eb-9264-d6a8f39145ba.png)
 
 
 
@@ -25,5 +25,5 @@ https://ali-mitchell.github.io/My_Daily_Journal/
 I would like to add a phone sized Media Query and a "clear User Input" button. I'd also like to make this applicable to a whole week. 
 
 =======
-In the Javascript I felt like I used the same Function again and again in a way that wasn't the best use of my time. I'm hoping to find a way to get all the time-blocks to save in an object instead of multiple functions, would love feedback on how to do this. I also has a really hard tiem with getting Jquery to work for me. I am going to spend some mroe time on this. 
->>>>>>> 2baafa7facdcce152d19bae0f735f8e3b81f44db
+In the Javascript I felt like I used the same Function again and again in a way that wasn't the best use of my time. I'm hoping to find a way to get all the time-blocks to save in an object instead of multiple functions, would love feedback on how to do this. I also has a really hard tiem with getting Jquery to work for me. I am going to spend some more time on this. 
+
