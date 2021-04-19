@@ -12,14 +12,14 @@ currentDate.textContent = moment().format("dddd, Do MMMM");
                     alert("Please enter text to save to your journal");
                     return false;
                 } else {
-                    localStorage.setItem('AM', tasksAM);
+                    localStorage.setItem('AM', tasksAm);
                 }
             });
 
 
             // function to allow saved events to persist
             var returnText = function() {
-                var returnTask = localStorage.getItem('userInput');
+                var returnTask = localStorage.getItem('AM');
                 console.log(typeof returnTask);
                 saveInputEl.textContent = returnTask;
             };
